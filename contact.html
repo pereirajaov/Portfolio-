@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contato</title>
+    <title>Contato - Seu Portfólio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -19,21 +19,42 @@
         </nav>
     </header>
     <main>
-        <h1>Contato</h1>
-        <form id="contact-form">
-            <label for="name">Nome:</label>
-            <input type="text" id="name" name="name" required>
-            
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            
-            <label for="message">Mensagem:</label>
-            <textarea id="message" name="message" required></textarea>
-            
-            <button type="submit">Enviar</button>
-        </form>
-        <p id="form-response"></p>
+        <section class="contact-section">
+            <h1>Entre em Contato</h1>
+            <form id="contact-form">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Mensagem:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Enviar Mensagem</button>
+                <p id="form-response"></p>
+            </form>
+        </section>
     </main>
-    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('menu-toggle');
+            const navMenu = document.getElementById('nav-menu');
+
+            menuToggle.addEventListener('click', function() {
+                navMenu.classList.toggle('show');
+            });
+
+            const contactForm = document.getElementById('contact-form');
+            const formResponse = document.getElementById('form-response');
+
+            contactForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                // Aqui você pode adicionar o código para enviar o formulário (por exemplo, usando AJAX)
+                formResponse.textContent = 'Formulário enviado com sucesso!';
+                contactForm.reset();
+            });
+        });
+    </script>
 </body>
 </html>

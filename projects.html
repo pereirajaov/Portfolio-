@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul id="nav-menu">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="about.html">Sobre</a></li>
+                <li><a href="projects.html">Projetos</a></li>
+                <li><a href="contact.html">Contato</a></li>
+            </ul>
+            <button id="menu-toggle">☰</button>
+        </nav>
+    </header>
+    <main>
+        <h1>Meus Projetos</h1>
+        <div class="gallery">
+            <div class="project" onclick="openModal('modal1')">
+                <h2>Projeto 1</h2>
+                <p>Descrição breve do projeto 1.</p>
+            </div>
+            <div class="project" onclick="openModal('modal2')">
+                <h2>Projeto 2</h2>
+                <p>Descrição breve do projeto 2.</p>
+            </div>
+            <!-- Adicione mais projetos conforme necessário -->
+        </div>
+        
+        <!-- Modals -->
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal1')">&times;</span>
+                <h2>Projeto 1</h2>
+                <p>Detalhes do projeto 1.</p>
+            </div>
+        </div>
+        <div id="modal2" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal2')">&times;</span>
+                <h2>Projeto 2</h2>
+                <p>Detalhes do projeto 2.</p>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
